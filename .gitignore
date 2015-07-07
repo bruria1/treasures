@@ -5,6 +5,6 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-sites/treasures.dd
-sites/treasures.dd/*
-sites/sites.php
+# sites/treasures.dd
+# sites/treasures.dd/*
+# sites/sites.php
