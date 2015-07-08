@@ -1699,10 +1699,43 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1435678845');
+  background-image: url('../images/progress.gif?1436267509');
 }
 
-/* line 1, ../sass/components/_arts.scss */
+/***********  fonts ****************/
+@font-face {
+  font-family: 'almoni-700';
+  font-weight: 700;
+  /*(bold)*/
+  font-style: normal;
+  src: url("../fonts/almoni-dl-aaa-700.eot");
+  src: url("../fonts/almoni-dl-aaa-700.eot#iefix") format("embedded-opentype"), url("../fonts/almoni-dl-aaa-700.woff") format("woff"), url("../fonts/almoni-dl-aaa-700.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'almoni-900';
+  font-weight: 900;
+  /*(black)*/
+  font-style: normal;
+  src: url("../fonts/almoni-dl-aaa-900.eot");
+  src: url("../fonts/almoni-dl-aaa-900.eot#iefix") format("embedded-opentype"), url("../fonts/almoni-dl-aaa-900.woff") format("woff"), url("../fonts/almoni-dl-aaa-900.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'almoni-300';
+  font-weight: 300;
+  /*(light)*/
+  font-style: normal;
+  src: url("../fonts/almoni-dl-aaa-300.eot");
+  src: url("../fonts/almoni-dl-aaa-300.eot#iefix") format("embedded-opentype"), url("../fonts/almoni-dl-aaa-300.woff") format("woff"), url("../fonts/almoni-dl-aaa-300.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'almoni-400';
+  font-weight: 400;
+  /*(regular)*/
+  font-style: normal;
+  src: url("../fonts/almoni-dl-aaa-400.eot");
+  src: url("../fonts/almoni-dl-aaa-400.eot#iefix") format("embedded-opentype"), url("../fonts/almoni-dl-aaa-400.woff") format("woff"), url("../fonts/almoni-dl-aaa-400.ttf") format("truetype");
+}
+/* line 40, ../sass/components/_arts.scss */
 a {
   text-decoration: none;
   color: #00A193;
@@ -1712,40 +1745,131 @@ a:active, a:hover {
   color: #00A193;
 }
 
-/* line 7, ../sass/components/_arts.scss */
+/* line 46, ../sass/components/_arts.scss */
 #header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
   padding-left: 30px;
   padding-right: 30px;
 }
 
+/* line 51, ../sass/components/_arts.scss */
+body {
+  font-family: 'almoni-400', sans-serif;
+  font-size: 18px;
+  background-color: #fcfcfc;
+}
+
+/* 
+ * main menu
+ ****************************************/
+/* line 60, ../sass/components/_arts.scss */
+.menu-button {
+  background-color: #00A193;
+  color: #fff;
+  overflow: hidden;
+  float: right;
+  padding: 11px 16px 6px 11px;
+  z-index: 200;
+  cursor: pointer;
+  position: absolute;
+}
+/* line 69, ../sass/components/_arts.scss */
+.menu-button span {
+  width: 17px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  display: block;
+}
+/* line 76, ../sass/components/_arts.scss */
+.menu-button .text {
+  float: right;
+  font-family: 'almoni-700', sans-serif;
+  font-size: 1.5em;
+}
+/* line 81, ../sass/components/_arts.scss */
+.menu-button .lines {
+  float: left;
+  padding-right: 13px;
+  padding-top: 6px;
+}
+
+/* line 88, ../sass/components/_arts.scss */
+#main-menu {
+  position: absolute;
+  background-color: rgba(77, 77, 77, 0.9);
+}
+/* line 91, ../sass/components/_arts.scss */
+#main-menu li {
+  width: 100%;
+}
+
+/* 
+ * FRONT
+ ****************************************/
+/* line 100, ../sass/components/_arts.scss */
+.front #page {
+  max-width: 100%;
+  padding: 0;
+}
+/* line 104, ../sass/components/_arts.scss */
+.front #page-title {
+  display: none;
+}
+/* line 107, ../sass/components/_arts.scss */
+.front #main {
+  padding: 0;
+}
+/* line 110, ../sass/components/_arts.scss */
+.front #navigation {
+  width: 100%;
+  padding: 0;
+}
+
+/* line 116, ../sass/components/_arts.scss */
+.flexslider {
+  border: none;
+}
+
+/* line 120, ../sass/components/_arts.scss */
+.view-home-page-gallery {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+/* line 124, ../sass/components/_arts.scss */
+.view-home-page-gallery .view-content {
+  position: relative;
+  top: -60px;
+}
+
 /* 
  * HEADER THEME
  ****************************************/
-/* line 17, ../sass/components/_arts.scss */
+/* line 134, ../sass/components/_arts.scss */
 .header__logo {
   padding-top: 47px;
 }
 
-/* line 22, ../sass/components/_arts.scss */
+/* line 139, ../sass/components/_arts.scss */
 .header__region {
   margin-right: 10.1%;
   float: right;
   clear: none !important;
 }
 
-/* line 29, ../sass/components/_arts.scss */
+/* line 146, ../sass/components/_arts.scss */
 #block-lang-dropdown-language {
   padding-top: 47px;
 }
-/* line 32, ../sass/components/_arts.scss */
+/* line 149, ../sass/components/_arts.scss */
 #block-lang-dropdown-language h2 {
   display: none;
 }
-/* line 35, ../sass/components/_arts.scss */
+/* line 152, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .dd-selected {
   padding: 6px;
 }
-/* line 38, ../sass/components/_arts.scss */
+/* line 155, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .dd-select {
   width: 78px !important;
   height: 27px;
@@ -1762,24 +1886,24 @@ a:active, a:hover {
 #block-lang-dropdown-language .dd-select:hover a {
   color: #000 !important;
 }
-/* line 43, ../sass/components/_arts.scss */
+/* line 160, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .dd-select a {
   color: #fff;
 }
-/* line 47, ../sass/components/_arts.scss */
+/* line 164, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .dd-select:hover .dd-pointer,
 #block-lang-dropdown-language .dd-select:hover .dd-pointer-down {
   border-color: #000 transparent transparent;
   border-width: 6px;
 }
-/* line 54, ../sass/components/_arts.scss */
+/* line 171, ../sass/components/_arts.scss */
 #block-lang-dropdown-language .dd-pointer,
 #block-lang-dropdown-language .dd-pointer-down {
   border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
   right: 80%;
 }
 
-/* line 64, ../sass/components/_arts.scss */
+/* line 181, ../sass/components/_arts.scss */
 #block-textsize-form h2 {
   display: none;
 }
