@@ -72,6 +72,7 @@
     </div>
 
     <div id="navigation">
+      <div class="wrapper-width">
       <div class="menu-button">
         <div class="text"><?php print t("Menu"); ?></div>
         <div class="lines">
@@ -80,8 +81,9 @@
           <span class="line3"></span>
         </div>
       </div>
+    </div>
       <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation" tabindex="-1">
+        <nav id="main-menu" class="hide" role="navigation" tabindex="-1">
           <?php
           // This code snippet is hard to modify. We recommend turning off the
           // "Main menu" on your sub-theme's settings form, deleting this PHP
@@ -102,7 +104,9 @@
       <?php endif; ?>
 
       <?php print render($page['navigation']); ?>
-
+      <div id="container-triangle">
+        <div id="triangle-topleft"></div>
+      </div>
     </div>
 
     <?php

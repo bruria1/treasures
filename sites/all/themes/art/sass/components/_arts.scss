@@ -41,6 +41,17 @@ a {
 	@include links;
 }
 
+html{
+	height: 100%;
+	#page, #main{
+		height: 100%;
+	}
+	.display-menu{
+		#navigation{
+  			height: calc(100% - 97px);
+		}
+	}
+}
 
 //Overall Changes to theme
 #header, #content, #navigation, .region-sidebar-first, .region-sidebar-second, #footer {
@@ -54,6 +65,9 @@ body{
 	background-color: #fcfcfc;
 }
 
+.wrapper-width{
+	@include width;
+}
 /* 
  * main menu
  ****************************************/
@@ -71,7 +85,9 @@ body{
 		height: 2px;
 		margin-bottom: 4px;
 		background-color: #fff;
-		display: block;
+		display: block;  
+		transition: all 0.5s;
+  		-webkit-transition: all 0.5s;
 	}
 	.text{
 		float: right;
@@ -85,13 +101,62 @@ body{
 	}
 }
 
+.display-menu .menu-button{
+  span{
+    margin: 0;
+  }
+  .line1{
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    margin-top: 6px;
+  }
+  .line2{
+    display: none;
+  }
+  .line3{
+    margin-top: -2px;
+    transform: rotate(135deg);
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+  }
+}
+
 #main-menu{
-	position: absolute;
+	float: right;
 	background-color: rgba(77, 77, 77, 0.9);
-	li{
+  	height: 100%;
+  	transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	opacity: 1;
+  	li{
 		width: 100%;
 	}
 }
+
+#main-menu.hide{
+	opacity: 0;
+}
+/*
+#container-triangle {
+  height: calc(100% - 138px);
+  width: 170px;
+  overflow: hidden;
+  position: relative;
+}
+#triangle-topleft { 
+    content: '';
+    position: absolute;
+    left: 20%;
+    width: 100%; 
+    height: 200%; 
+    background-color: rgb(77, 77, 77); 
+	background-color: rgba(77, 77, 77, 0.9);
+    top: 0;
+    -webkit-transform: rotate(23deg);
+    -moz-transform: rotate(23deg);
+    transform: rotate(23deg);
+}*/
 /* 
  * FRONT
  ****************************************/
@@ -113,6 +178,10 @@ body{
 	}
 }
 
+body.front{
+	height: 100%;
+}
+
 .flexslider{
 	border: none;
 }
@@ -131,8 +200,9 @@ body{
  ****************************************/
 
 // Logo
-.header__logo {
-  padding-top: 47px;
+header {
+  @include width;
+  padding: 47px 3% 39px!important;
 }
 
 // the Header region 
